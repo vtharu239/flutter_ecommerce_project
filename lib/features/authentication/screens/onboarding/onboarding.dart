@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_ecommerce_project/features/authentication/controllers/onboarding_controller.dart';
-import 'package:flutter_ecommerce_project/features/authentication/screens/onboarding/onboarding/onboarding_dot_navigation.dart';
-import 'package:flutter_ecommerce_project/features/authentication/screens/onboarding/onboarding/onboarding_next_button.dart';
-import 'package:flutter_ecommerce_project/features/authentication/screens/onboarding/onboarding/onboarding_page.dart';
-import 'package:flutter_ecommerce_project/features/authentication/screens/onboarding/onboarding/onboarding_skip.dart';
+import 'package:flutter_ecommerce_project/features/authentication/screens/onboarding/widgets/onboarding_dot_navigation.dart';
+import 'package:flutter_ecommerce_project/features/authentication/screens/onboarding/widgets/onboarding_next_button.dart';
+import 'package:flutter_ecommerce_project/features/authentication/screens/onboarding/widgets/onboarding_page.dart';
+import 'package:flutter_ecommerce_project/features/authentication/screens/onboarding/widgets/onboarding_skip.dart';
+
 
 import 'package:flutter_ecommerce_project/utils/constants/image_strings.dart';
 import 'package:flutter_ecommerce_project/utils/constants/text_strings.dart';

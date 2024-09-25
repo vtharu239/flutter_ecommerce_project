@@ -1,36 +1,37 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_ecommerce_project/common/styles/spacing_styles.dart';
 import 'package:flutter_ecommerce_project/common/widgets/login_signup/form_divider.dart';
 import 'package:flutter_ecommerce_project/common/widgets/login_signup/social_buttons.dart';
-import 'package:flutter_ecommerce_project/features/authentication/screens/onboarding/login/widgets/login_form.dart';
-import 'package:flutter_ecommerce_project/features/authentication/screens/onboarding/login/widgets/login_header.dart';
+import 'package:flutter_ecommerce_project/features/authentication/screens/signup/widgets/signup_form.dart';
 import 'package:flutter_ecommerce_project/utils/constants/sizes.dart';
 import 'package:flutter_ecommerce_project/utils/constants/text_strings.dart';
 import 'package:get/get_utils/src/extensions/string_extensions.dart';
 
-
-class LoginScreen extends StatelessWidget {
-  const LoginScreen({super.key});
+class SignupScreen extends StatelessWidget {
+  const SignupScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(),
       body: SingleChildScrollView(
         child: Padding(
-          padding: TSpacingStyle.paddingWithAppBarHeight,
+          padding: const EdgeInsets.all(TSizes.defaultSpace),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              /// Logo Title & Sub Title
-              const TLoginHeader(),
-
-              /// Form
-              const TLoginForm(),
-
-              /// Divider
-              TFormDivider(dividerText: TTexts.orSignInWith.capitalize!),
+              /// Title
+              Text(TTexts.signupTitle, style: Theme.of(context).textTheme.headlineMedium),
               const SizedBox(height: TSizes.spaceBtwSections),
 
-              /// Footer
+              /// Form
+              const TSignupForm(),
+              const SizedBox(height: TSizes.spaceBtwSections),
+
+              /// Divider
+              TFormDivider(dividerText: TTexts.orSignUpWith.capitalize!),
+              const SizedBox(height: TSizes.spaceBtwSections),
+
+              /// Social Buttons
               const TSocialButtons(),
             ],
           ),
@@ -39,4 +40,5 @@ class LoginScreen extends StatelessWidget {
     );
   }
 }
+
 
